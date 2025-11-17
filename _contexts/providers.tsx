@@ -7,11 +7,17 @@ const Providers = ({ children }: { children: React.ReactNode }) => {
     <HeroUIProvider>
       <ToastProvider
         toastProps={{
+          color: "default",
           timeout: 3000,
           shouldShowTimeoutProgress: true,
+          classNames: {
+            base: "dark text-foreground bg-background",
+          },
         }}
       />
-      {children}
+      <main className="h-screen w-screen dark text-foreground bg-background">
+        {children}
+      </main>
     </HeroUIProvider>
   );
 };
