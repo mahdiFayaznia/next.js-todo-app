@@ -1,4 +1,5 @@
 import { fontAleo, fontNunito } from "@/_configs";
+import { Providers } from "@/_contexts";
 import type { Metadata } from "next";
 import "./globals.css";
 
@@ -17,7 +18,9 @@ export default function RootLayout({
       lang="en"
       className={`${fontNunito.variable} ${fontAleo.variable} antialiased`}
     >
-      <body>{children}</body>
+      <body>
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
 }
