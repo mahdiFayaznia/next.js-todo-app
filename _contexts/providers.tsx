@@ -1,24 +1,26 @@
 "use client";
 
 import { HeroUIProvider, ToastProvider } from "@heroui/react";
+import { ThemeProvider } from "next-themes";
 
 const Providers = ({ children }: { children: React.ReactNode }) => {
   return (
-    <HeroUIProvider>
-      <ToastProvider
-        toastProps={{
-          color: "default",
-          timeout: 3000,
-          shouldShowTimeoutProgress: true,
-          classNames: {
-            base: "dark text-foreground bg-background",
-          },
-        }}
-      />
-      <main className="h-screen w-screen dark text-foreground bg-background">
+    <ThemeProvider
+      attribute="class" // adds class `dark` to <html>
+      defaultTheme="system"
+      enableSystem={true}
+    >
+      <HeroUIProvider>
+        <ToastProvider
+          toastProps={{
+            color: "default",
+            timeout: 3000,
+            shouldShowTimeoutProgress: true,
+          }}
+        />
         {children}
-      </main>
-    </HeroUIProvider>
+      </HeroUIProvider>
+    </ThemeProvider>
   );
 };
 

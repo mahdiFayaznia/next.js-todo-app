@@ -16,9 +16,10 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       className={`${fontNunito.variable} ${fontAleo.variable} antialiased`}
     >
-      <body>
+      <body className="text-foreground bg-background">
         <Providers>{children}</Providers>
       </body>
     </html>
