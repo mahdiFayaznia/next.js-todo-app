@@ -1,3 +1,4 @@
+import { AppLayout } from "@/_components/ui";
 import { fontAleo, fontNunito } from "@/_configs";
 import { Providers } from "@/_contexts";
 import type { Metadata } from "next";
@@ -20,7 +21,9 @@ export default function RootLayout({
       className={`${fontNunito.variable} ${fontAleo.variable} antialiased`}
     >
       <body className="text-foreground bg-background">
-        <Providers>{children}</Providers>
+        <Providers>
+          <AppLayout>{children}</AppLayout>
+        </Providers>
       </body>
     </html>
   );
