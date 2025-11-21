@@ -4,8 +4,8 @@ import ThemeSwitcher from "./ThemeSwitcher";
 const AppNavbar = () => {
   return (
     <div className="container mx-auto flex flex-col justify-between gap-2 p-4 md:flex-row">
-      <AppNavbarHeading />
-      <div className="flex gap-4">
+      <Heading />
+      <div className="flex flex-1 justify-end gap-4">
         <Search />
         <ThemeSwitcher />
       </div>
@@ -13,9 +13,9 @@ const AppNavbar = () => {
   );
 };
 
-const AppNavbarHeading = () => {
+const Heading = () => {
   return (
-    <h1 className="FLEX-CENTER font-aleo text-default-700 text-3xl font-black uppercase">
+    <h1 className="FLEX-CENTER font-aleo text-default-700 text-3xl font-black uppercase select-none">
       Todo App
     </h1>
   );

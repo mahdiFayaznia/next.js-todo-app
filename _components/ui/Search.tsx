@@ -8,7 +8,7 @@ const Search = () => {
     <Input
       labelPlacement="outside"
       placeholder="Search todo"
-      className="w-full md:max-w-md"
+      className="w-full md:max-w-xs"
       isClearable
       startContent={<RiSearchLine />}
     />

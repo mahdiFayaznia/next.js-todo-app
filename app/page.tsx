@@ -1,5 +1,7 @@
+import { TodoContainer } from "@/_components/ui";
+
 const Home = () => {
-  return <div className="bg-default-100 h-full w-full rounded-2xl"></div>;
+  return <TodoContainer />;
 };
 
 export default Home;
