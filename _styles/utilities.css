@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .FLEX-CENTER {
+    @apply flex items-center justify-center;
+  }
+  .FLEX-H-CENTER {
+    @apply flex justify-center;
+  }
+  .FLEX-V-CENTER {
+    @apply flex items-center;
+  }
+  .FLEX-CENTER-COL {
+    @apply flex flex-col items-center justify-center;
+  }
+  .FLEX-H-CENTER-COL {
+    @apply flex flex-col items-center;
+  }
+  .FLEX-V-CENTER-COL {
+    @apply flex flex-col justify-center;
+  }
+}
