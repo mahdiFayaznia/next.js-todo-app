@@ -1,6 +1,6 @@
 "use client";
 
-import AddTodo from "./AddTodo";
+import { AddTodo } from "@/_components/ui";
 
 const TodoContainer = () => {
   return (

@@ -1,5 +1,4 @@
-import Search from "./Search";
-import ThemeSwitcher from "./ThemeSwitcher";
+import { Search, ThemeSwitcher } from "@/_components/ui";
 
 const AppNavbar = () => {
   return (

@@ -1,4 +1,4 @@
-import { AppLayout } from "@/_components/ui";
+import { AppLayout } from "@/_components/layout";
 import { fontAleo, fontNunito } from "@/_configs";
 import { Providers } from "@/_contexts";
 import type { Metadata } from "next";

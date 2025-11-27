@@ -1,4 +1,4 @@
-import { TodoContainer } from "@/_components/ui";
+import { TodoContainer } from "@/_components/layout";
 
 const Home = () => {
   return <TodoContainer />;
