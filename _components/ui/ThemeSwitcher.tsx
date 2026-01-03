@@ -10,8 +10,10 @@ const ThemeSwitcher = () => {
   return (
     <Button
       isIconOnly
+      size="lg"
+      variant="bordered"
+      className="text-default-700 rounded-full"
       aria-label="Theme Switcher ThemeSwitcher"
-      color="default"
       onPress={() => setTheme(theme === "dark" ? "light" : "dark")}
     >
       {theme === "dark" ? <RiSunLine /> : <RiMoonLine />}

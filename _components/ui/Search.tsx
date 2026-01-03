@@ -6,10 +6,11 @@ import { RiSearchLine } from "@remixicon/react";
 const Search = () => {
   return (
     <Input
+      isClearable
+      size="lg"
       labelPlacement="outside"
       placeholder="Search todo"
       className="w-full md:max-w-xs"
-      isClearable
       startContent={<RiSearchLine />}
     />
   );
