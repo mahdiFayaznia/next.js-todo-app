@@ -8,12 +8,13 @@ const Providers = ({ children }: { children: React.ReactNode }) => {
     <ThemeProvider
       attribute="class" // adds class `dark` to <html>
       defaultTheme="system"
-      enableSystem={true}
+      enableSystem
     >
       <HeroUIProvider>
         <ToastProvider
           toastProps={{
             color: "default",
+            variant: "bordered",
             timeout: 3000,
             shouldShowTimeoutProgress: true,
           }}
