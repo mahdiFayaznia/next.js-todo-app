@@ -1,4 +1,5 @@
 import { ThemeSwitcher } from "@/_components/ui";
+import { Suspense } from "react";
 import Search from "./Search";
 
 const AppNavbar = () => {
@@ -6,7 +7,9 @@ const AppNavbar = () => {
     <div className="container mx-auto flex flex-col justify-between gap-2 p-4 md:flex-row">
       <Heading />
       <div className="flex flex-1 justify-end gap-4">
-        <Search />
+        <Suspense fallback={null}>
+          <Search />
+        </Suspense>
         <ThemeSwitcher />
       </div>
     </div>
