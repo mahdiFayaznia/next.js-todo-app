@@ -1,8 +1,13 @@
 import { prisma } from "@/_lib";
 import TodoItem from "./TodoItem";
 
-const TodoList = async () => {
+interface Props {
+  query?: string;
+}
+
+const TodoList = async ({ query = "" }: Props) => {
   const todos = await prisma.todo.findMany({
+    where: query.trim().length > 0 ? { title: { contains: query } } : undefined,
     orderBy: { createdAt: "desc" },
   });
 
